@@ -1,103 +1,87 @@
-import Image from "next/image";
+import Navbar from '@/components/navbar'; // Make sure path is correct
+import Project from '@/components/project'; // Make sure path is correct
+import Arrow from '@/components/arrow'; // Make sure path is correct
+import Skill from '@/components/skill'; // Make sure path is correct
+import GithubButton from '@/components/ibutton';
+import LinkedInButton  from '@/components/ibutton1';
 
-export default function Home() {
+import clogo from '@/icons/clogo.png'; // Make sure path is correct
+import neuralnetwork2 from '@/projectpictures/nn2.png'; // Make sure path is correct
+import mecanum from '@/projectpictures/mecanumwheel.png'; // Make sure path is correct
+import roboticarm from '@/projectpictures/arm.jpeg'; // Make sure path is correct
+import regression from '@/projectpictures/regression.png'; // Make sure path is correct
+import sunnyview from '@/projectpictures/sunnyview.png'; // Make sure path is correct
+
+
+import Skill_set from '@/components/skill_set';
+export default function HomePage() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <>
+      <Navbar />
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+      <main className="flex flex-col items-center justify-start min-h-screen bg-gray-50 font-nunito font-semibold ">
+        <div className="flex items-center justify-center h-[700px] w-full border-2 border-black bg-gray-900 text-black p-4">
+          <div className="flex flex-col items-center justify-center  text-gray-50 text-7xl text-center">
+          <h1>Hello, I am Jeffrey</h1>
+          <h1 className = "text-5xl mt-[20px]">I am studying CS + Math at Purdue University</h1>
+
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
-  );
+
+        <Arrow />
+
+        <h1 className="text-black text-4xl mt-[50px]"> Projects</h1>
+        <Project title="Project 1" description="This is a description of project 1" img = {roboticarm}/>
+        <Project title="Project 2" description="This is a description of project 2" img = {neuralnetwork2} />
+        <Project title="Project 3" description="This is a description of project 3" img = {regression}/>
+        <Project title="Project 4" description="This is a description of project 4" img = {mecanum}/>
+        <Project title="Project 5" description="This is a description of project 5" img = {sunnyview}/>
+        
+        <Arrow />
+
+        <h1 className="text-black text-4xl mt-[50px]"> Skills</h1>
+
+        <div className="flex flex-wrap  items-center justify-around w-[1000px] border-2 border-black p-0" >
+          <Skill title="Machine Learning" description="This is a description of skill 1" skills={["Python", "C"]} />
+          <Skill title="Unity" description="This is a description of skill 1" skills={["Python", "C"]} />
+          <Skill title="ROS2" description="This is a description of skill 1" skills={["Python", "C"]} />
+          <Skill title="3D Modelling" description="This is a description of skill 1" skills={["Python", "C"]} />
+          <Skill title="Backend" description="This is a description of skill 1" skills={["Python", "C"]} />
+          <Skill title="Frontend" description="This is a description of skill 1" skills={["Python", "C"]} />
+        </div>
+
+        <Arrow />
+
+        <h1 className="text-black text-4xl mt-[50px]"> Contact</h1>
+        <div className="flex flex-col items-center justify-center w-[900px] h-[300px] border-2 border-black bg text-black p-4 mb-[100px] pt-[50px]">
+          <div className= "">
+            <h1 className="text-lg">
+              My university email:{" "}
+              <a href="mailto:zhou1530@purdue.edu" className="text-blue-600 underline hover:text-blue-800">
+                zhou1530@purdue.edu
+              </a>
+            </h1>
+          </div>
+
+          <div className= "mt-[10px]">
+            <h1 className="text-lg">
+              My personal email:{" "}
+              <a href="mailto:jeffreyzhou123@gmail.com" className="text-blue-600 underline hover:text-blue-800">
+                jeffreyzhou123@gmail.com
+              </a>
+            </h1>
+          </div>
+
+
+          <div className='flex items-center h-[50px] border-2 border-amber-300 mt-[50px] mb-[20px] w-[300px] justify-around'>
+            <GithubButton link="google.com" text="Github" />
+            <LinkedInButton link="google.com" text="LinkedIn" />
+          </div>
+
+        </div>
+
+
+      </main> 
+    </>
+  );  
 }
